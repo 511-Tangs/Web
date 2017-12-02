@@ -1,0 +1,42 @@
+<HTML>
+  <HEAD><TITLE></TITLE></HEAD>
+  <BODY>
+    <OL>	
+      <LI>On 11/26/2017
+
+<PRE>	
+      Configured Clock Speed: 2666 MHz, mine 2400MHz
+      # A few Part Numbers are newer.
+      # I think it is worthwhile for waiting a little longer.
+</PRE>	
+
+      <LI>On 11/23/2017
+<PRE>	
+$ sudo cat /var/log/kern.log | grep seg
+Nov 23 07:48:23 Amath-Client00 kernel: [324908.306853] Chrome_ChildThr[6591]: segfault at 0 ip 00005601e8940d6c sp 00007f4e3a5fe3e0 \
+  error 6 in plugin-container[5601e893c000+1b000]
+$ ps
+  PID TTY          TIME CMD
+14790 pts/0    00:00:00 bash
+14860 pts/0    00:00:00 dbus-launch
+15003 pts/0    00:00:00 emacs
+15221 pts/0    00:00:00 ps
+$ sudo cat /var/log/kern.log | grep seg
+Nov 23 18:32:59 Amath-Client00 kernel: [363586.399616] Chrome_ChildThr[14903]: segfault at 0 ip 0000561d204eed6c sp 00007faa04bfe3e0 \
+  error 6 in plugin-container[561d204ea000+1b000]
+</PRE>
+
+      <P> I don't know what <b>dbus-launch</b> is, why it started. The firefox
+          displays everything very sluggishly.  By the way, I launced firefox
+	  remotely. And it seems it causes too much network traffic.</p>
+	
+      <LI>On 11/22/2017
+<PRE>	
+$ sudo cat /var/log/kern.log | grep seg
+Nov 22 18:30:51 Amath-Client00 kernel: [280595.875781] Chrome_ChildThr[28560]: segfault at 0 ip 00005598fd0b8d6c sp 00007f7540afe3e0 \
+  error 6 in plugin-container[5598fd0b4000+1b000]
+</PRE>	
+    </OL>
+  </BODY>
+<HTML>
+    
